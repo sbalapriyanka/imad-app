@@ -69,10 +69,10 @@ var SecondOne = {
                 i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article. 
             </p> `
 }
-function createone2 (data)
+function createone2 (data1)
 {
-    var title = data.title;
-    var content = data.content;
+    var title = data1.title;
+    var content = data1.content;
 
 var firsttemplate2 =`
 <html>
