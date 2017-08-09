@@ -103,10 +103,10 @@ var firsttemplate2 =`
 </div>
 
 <div>
-
+<h2> My article two</h2>
 ${content}
 
-<h2> My article two</h2>
+
 
 </div>
 </div>
@@ -155,9 +155,9 @@ var firsttemplate3 =`
 
 <div>
 
+<h2> My article three</h2>
 ${content}
 
-<h2> My article two</h2>
 
 </div>
 </div>
