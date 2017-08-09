@@ -20,3 +20,11 @@ body {
     height: 200px;
 }
 
+.stylecontainer  {
+        max-width = 800px;
+        margin 0 auto;
+        color : green;
+        font-family : sans-serif;
+        
+    }
+    
