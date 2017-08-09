@@ -46,10 +46,10 @@ var firsttemplate =`
 </div>
 
 <div>
-
+<h2> My article one</h2>
 ${content}
 
-<h2> My article one</h2>
+
 
 </div>
 </div>
@@ -113,7 +113,7 @@ ${content}
 </body>
 </html>`
 
-return createone2;
+return firsttemplate2;
 
 }
 
@@ -164,7 +164,7 @@ ${content}
 </body>
 </html>`
 
-return createone3;
+return firsttemplate3;
 
 }
 
