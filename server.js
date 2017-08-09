@@ -5,13 +5,84 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var FirstOne = {
+    title: 'My first article',
+    content: `
+    <ol>
+    <li>i am happy to publish my first article</li>
+    <li>i am happy to publish my first article</li><li>i am happy to publish my first article</li><li>i am happy to publish my first article</li><li>i am happy to publish my first article</li>
+</ol>
+</div>
+
+<div>
+    <p>
+        i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.
+    </p>`
+}
+
+function createone (data)
+{
+    var title = data.title;
+    var content = data.content;
+
+var firsttemplate =`
+<html>
+
+<head>
+<title>${title}</title>
+<meta name="view port" content = "width = device-width,initial-scale=1" />
+<link href="/ui/style.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+<div class = "stylecontainer">
+<div>
+
+<a href="/" >Home</a>
+</div>
+
+<div>
+
+${content}
+
+<h2> My article one</h2>
+
+</div>
+</div>
+</body>
+</html>`
+
+return createone;
+
+}
+
+app.get('/FirstOne', function (req, res) {
+  res.send(createone(FirstOne));
+});
+
+var SecondOne = {
+    title: 'My second article',
+    content: `
+    <p>
+                i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article. 
+            </p> `
+}
+
+var ThirdOne = {
+    title: 'My third article',
+    content: `
+    <p>
+                i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article.
+            </p>`
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/FirstOne', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'FirstOne.html'));
-});
+
 
 app.get('/SecondOne', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'SecondOne.html'));
