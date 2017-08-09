@@ -22,13 +22,13 @@ app.get('/FirstArticle', function  (req, res) {
 });
 
 
+
+
 app.get('/SecondArticle', function  (req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'SecondOne.html'));
 });
 
-app.get('/SecondArticle', function  (req, res) {
-  res.send('Article 2 is served');
-});
+
 app.get('/ThirdArticle', function  (req, res) {
   res.send('Article 3 is served');
 });
