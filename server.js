@@ -26,10 +26,12 @@ function createone (data)
     var content = data.content;
 
 var firsttemplate =`
+
 <html>
 
 <head>
 <title>${title}</title>
+
 <meta name="view port" content = "width = device-width,initial-scale=1" />
 <link href="/ui/style.css" rel="stylesheet" />
 
@@ -54,7 +56,7 @@ ${content}
 </body>
 </html>`
 ;
-return createone;
+return firsttemplate;
 
 }
 
