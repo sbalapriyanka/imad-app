@@ -69,6 +69,47 @@ var SecondOne = {
                 i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article. 
             </p> `
 }
+function createone2 (data)
+{
+    var title = data.title;
+    var content = data.content;
+
+var firsttemplate2 =`
+<html>
+
+<head>
+<title>${title}</title>
+<meta name="view port" content = "width = device-width,initial-scale=1" />
+<link href="/ui/style.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+<div class = "stylecontainer">
+<div>
+
+<a href="/" >Home</a>
+</div>
+
+<div>
+
+${content}
+
+<h2> My article two</h2>
+
+</div>
+</div>
+</body>
+</html>`
+
+return createone2;
+
+}
+
+app.get('/SecondOne', function (req, res) {
+  res.send(createone2(SecondOne));
+});
 
 var ThirdOne = {
     title: 'My third article',
@@ -78,20 +119,59 @@ var ThirdOne = {
             </p>`
 }
 
+
+function createone3 (data)
+{
+    var title = data.title;
+    var content = data.content;
+
+var firsttemplate3 =`
+<html>
+
+<head>
+<title>${title}</title>
+<meta name="view port" content = "width = device-width,initial-scale=1" />
+<link href="/ui/style.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+<div class = "stylecontainer">
+<div>
+
+<a href="/" >Home</a>
+</div>
+
+<div>
+
+${content}
+
+<h2> My article two</h2>
+
+</div>
+</div>
+</body>
+</html>`
+
+return createone3;
+
+}
+
+app.get('/ThirdOne', function (req, res) {
+  res.send(createone3(ThirdOne));
+});
+
+
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 
 
-app.get('/SecondOne', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'SecondOne.html'));
-});
-
-
-app.get('/ThirdOne', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'ThirdOne.html'));
-});
 
 
 
