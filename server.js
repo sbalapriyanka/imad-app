@@ -22,8 +22,6 @@ app.get('/FirstArticle', function  (req, res) {
 });
 
 
-
-
 app.get('/SecondArticle', function  (req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'SecondOne.html'));
 });
