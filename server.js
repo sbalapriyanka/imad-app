@@ -28,7 +28,7 @@ app.get('/SecondArticle', function  (req, res) {
 
 
 app.get('/ThirdArticle', function  (req, res) {
-  res.send('Article 3 is served');
+  res.sendFile(path.join(__dirname, 'ui', 'ThirdOne.html'));
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
