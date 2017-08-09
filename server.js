@@ -22,12 +22,12 @@ app.get('/FirstOne', function  (req, res) {
 });
 
 
-app.get('/SecondArticle', function  (req, res) {
+app.get('/SecondOne', function  (req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'SecondOne.html'));
 });
 
 
-app.get('/ThirdArticle', function  (req, res) {
+app.get('/ThirdOne', function  (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'ThirdOne.html'));
 });
 
