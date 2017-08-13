@@ -11,6 +11,10 @@ function move(){
  element.style.marginLeft = leftmargin + 'px';
 }
 
+if(leftmargin > 150 )
+{
+    
+}
 element.onclick = function(){
     var position = setInterval(move,300);
 };
