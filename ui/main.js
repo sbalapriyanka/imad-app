@@ -18,7 +18,7 @@ element.onclick = function(){
 
 
 var counter = 0;
-var click = document.getElementById('click');
+var click = document.getElementById('times');
 click.onclick = function(){
     counter = counter+1;
     click.innerHTML = counter.toString();
