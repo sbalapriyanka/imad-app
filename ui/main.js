@@ -15,3 +15,11 @@ clearInterval(element);
 element.onclick = function(){
     var position = setInterval(move,300);
 };
+
+
+var counter = 0;
+var click = document.getElementById('click');
+click.onclick = function(){
+    counter = counter+1;
+    click.INNERHTML = counter;
+}
