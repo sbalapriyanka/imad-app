@@ -13,7 +13,7 @@ function move(){
 
 if(leftmargin > 150 )
 {
-    
+    clearInterval(element)
 }
 element.onclick = function(){
     var position = setInterval(move,300);
