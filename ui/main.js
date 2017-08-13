@@ -21,5 +21,5 @@ var counter = 0;
 var click = document.getElementById('click');
 click.onclick = function(){
     counter = counter+1;
-    click.INNERHTML = counter;
+    click.innerHTML = counter.toString();
 }
