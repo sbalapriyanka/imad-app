@@ -18,8 +18,10 @@ element.onclick = function(){
 
 
 var counter = 0;
-var click = document.getElementById('times');
+var click = document.getElementById('click');
+
 click.onclick = function(){
+    var times = document.getElementById('times')
     counter = counter+1;
-    click.innerHTML = counter.toString();
+    times.innerHTML = counter.toString();
 }
