@@ -172,9 +172,9 @@ app.get('/ThirdOne', function (req, res) {
   res.send(createone3(ThirdOne));
 });
 
-var count = 0;
+var counter = 0;
 app.get('/counter', function(req,res) {
-    count = count+1 ;
+    counter = counter + 1 ;
     res.send(count(toString));
 });
 
