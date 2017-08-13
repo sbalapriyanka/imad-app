@@ -1,13 +1,12 @@
 console.log('Loaded!');
 alert("hello js");
 
+var leftmargin = 0;
+var element = document.getElementById('dino');
+function move(){
+    leftmargin = leftmargin +10;
+}  element.style.marginLeft = leftmargin + 'px';
 
-var element1 = document.getElementById('dino');
-var left = 0;
-element1.onclick = function()
-{
- element1.style.marginLeft = '100px';
- 
- var left = left + 200;
-
-};
+element.onclick = function(){
+    var position = setInterval(move,300);
+}
