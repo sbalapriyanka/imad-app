@@ -175,7 +175,7 @@ app.get('/ThirdOne', function (req, res) {
 var counter = 0;
 app.get('/counter', function(req,res) {
     counter = counter + 1 ;
-    res.send(count(toString));
+    res.send(counter.toString());
 });
 
 app.get('/ui/main.js', function (req, res) {
