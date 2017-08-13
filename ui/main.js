@@ -9,4 +9,4 @@ function move(){
 
 element.onclick = function(){
     var position = setInterval(move,300);
-}
+};
