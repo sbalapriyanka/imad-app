@@ -71,7 +71,7 @@ app.get('/', function (req, res) {
 
 
 app.get('/FirstOne', function (req, res) {
- pool.query("SELECT * FROM article1 WHERE title = '" + req.params.FirstOne + "'", function(err,result )
+ pool.query("SELECT * FROM article1 WHERE title = ", function(err,result )
  {
      if (err)
      {
