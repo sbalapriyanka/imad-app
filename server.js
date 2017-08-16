@@ -172,6 +172,19 @@ app.get('/ThirdOne', function (req, res) {
   res.send(createone3(ThirdOne));
 });
 
+var pool = new pool (config);
+app.get('/test.db',function (req, res){
+    pool.query('SELECT * FROM test' , function(err, result){
+        if(err)
+        {
+            res.status(500).send(err.toString());
+        }
+            else
+         {   
+        res.send(JSON.Stringify(result));
+    }
+});
+});
 var counter = 0;
 app.get('/counter', function(req,res) {
     counter = counter + 1 ;
