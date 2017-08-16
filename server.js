@@ -172,7 +172,17 @@ app.get('/ThirdOne', function (req, res) {
   res.send(createone3(ThirdOne));
 });
 /////////////
+// create a pool
 var Pool = require('pg').Pool;
+ // create config 
+ var config = {
+     user : 'balapriyankasomasekaran',
+     database : 'balapriyankasomasekaran',
+     host: 'db.imad.hasura.app.io',
+     port: '5432',
+     passpord: process.env.DB_PASSWORD
+ };
+
 var pool = new Pool(config);
 app.get('/test-db',function (req, res){
     pool.query('SELECT * FROM test' , function(err, result){
