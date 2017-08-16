@@ -179,8 +179,8 @@ var Pool = require('pg').Pool;
      user : 'balapriyankasomasekaran',
      database : 'balapriyankasomasekaran',
      host: 'db.imad.hasura-app.io',
-     port: '5432'
-     
+     port: '5432',
+     passpord: process.env.DB_PASSWORD
  };
 //create connection pool
 var pool = new Pool(config);
