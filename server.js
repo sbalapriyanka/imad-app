@@ -14,10 +14,7 @@ var FirstOne = {
 </ol>
 </div>
 
-<div>
-    <p>
-        i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.i am happy to publish my first article.
-    </p>`
+
 }
 
 
