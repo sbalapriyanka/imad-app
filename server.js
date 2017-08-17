@@ -81,7 +81,10 @@ app.get('/FirstOne', function (req, res) {
          if(result.rows.length === 0) {
              res.status(404).send('Article Not found');
          }else {
-             var articledata = result.rows[0];
+             for(var i=0;i<=10;i++){
+                 var articledata = result.rows[i];
+             }
+             
              res.send(createone(articledata));
              }
      }
