@@ -82,7 +82,7 @@ app.get('/FirstOne', function (req, res) {
              res.status(404).send('Article Not found');
          }else {
              var articledata = result.rows[0];
-             res.send(createTemplate(articledata));
+             res.send(firsttemplate(articledata));
              }
      }
  
