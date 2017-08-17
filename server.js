@@ -72,7 +72,7 @@ app.get('/', function (req, res) {
 
 app.get('/FirstOne', function (req, res) {
     
-    pool.query("SELECT * FROM article1 " , function(err,result)
+    pool.query("SELECT * FROM 'article1' " , function(err,result)
  {
      if (err)
      {
@@ -81,9 +81,9 @@ app.get('/FirstOne', function (req, res) {
          if(result.rows.length === 0) {
              res.status(404).send('Article Not found');
          }else {
-             for(var i=0;i<=10;i++){
-                 var articledata = result.rows[i];
-             }
+             
+                 var articledata = result.rows[0];
+             
              
              res.send(createone(articledata));
              }
