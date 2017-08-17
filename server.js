@@ -98,9 +98,7 @@ app.get('/FirstOne', function (req, res) {
 var SecondOne = {
     title: 'My second article',
     content: `
-    <p>
-                i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article.  i am happy to publish my second article. 
-            </p> `
+    `
 }
 function createone2 (data1)
 {
@@ -147,9 +145,7 @@ app.get('/SecondOne', function (req, res) {
 var ThirdOne = {
     title: 'My third article',
     content: `
-    <p>
-                i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article. i am happy to publish my third article.
-            </p>`
+    
 }
 
 
