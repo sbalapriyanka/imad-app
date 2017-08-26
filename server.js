@@ -236,6 +236,24 @@ function hash(input,salt)
     return["pbkdf2","10000",salt,hash.toString('hex')].join('$');
 }
 
+//create entry in user table
+var bodyParser = require('body-Parser');
+
+var username = req.body.username;
+var password = req.body.password;
+app.post('/create-user',function(req,res){
+    var salt = crypto.randomBytes(512);
+    var dbstring = hash(pasword,salt);
+    pool.query('INSERT INTO "usertable" (username,password) VALUES (100,200)',  [username,dbstring],function(err,result){
+        if(err){
+           res.status(500).send(err.toString());
+        }else{
+            res.send('user created : ' + username);
+            
+        }
+    
+        });
+    });
 
 
 
