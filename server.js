@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var crypto = require('crypto');
+
 var app = express();
 app.use(morgan('combined'));
 
@@ -222,7 +222,7 @@ app.get('/test-db',function (req, res){
 
 
 //program to convert string to hash string
-
+var crypto = require('crypto');
 //create end point
 
 app.get('/hash/:input',function(req,res){
