@@ -232,7 +232,7 @@ app.get('/hash/:input',function(req,res){
 
 function hash(input,salt)
 {
-    var hash = crypto.pbkdf2sync(input,salt,10000,512,'sha512');
+    var hash = crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
     return["pbkdf2","10000",salt,hash.toString('hex')].join($);
 }
 
