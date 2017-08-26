@@ -240,8 +240,7 @@ function hash(input,salt)
 var bodyParser = require('body-Parser');
 
 
-var app = express();
-app.use(morgan('combined'));
+
 
 app.use(bodyParser.json());
 
