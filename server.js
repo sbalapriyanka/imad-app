@@ -226,7 +226,7 @@ app.get('/test-db',function (req, res){
 //create end point
 
 app.get('/hash/:input',function(req,res){
-    var hashstring = hash(req.param.input,'This is always a random string');
+    var hashstring = hash(req.params.input,'This is always a random string');
     res.send(hashstring);
 });
 
