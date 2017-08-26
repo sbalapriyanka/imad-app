@@ -239,6 +239,13 @@ function hash(input,salt)
 //create entry in user table
 var bodyParser = require('body-Parser');
 
+
+var app = express();
+app.use(morgan('combined'));
+
+app.use(bodyParser.json());
+
+
 var username = req.body.username;
 var password = req.body.password;
 app.post('/create-user',function(req,res){
