@@ -218,6 +218,39 @@ app.get('/test-db',function (req, res){
 });
 });
 ///////////
+var crypto = require('crypto');
+
+
+//program to convert string to hash string
+
+//create end point
+
+app.get('/hash/input',function(req,res){
+    var hashstring = hash(req.param.input,'This is always a random string');
+    res.send(hashstring);
+});
+
+function hash(input,salt)
+{
+    var hash = crypto.pbkdf2sync(input,salt,10000,512,'sha512');
+    return["pbkdf2","10000",salt,hash.toString('hex')].join($);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///////////////
 var counter = 0;
 app.get('/counter', function(req,res) {
