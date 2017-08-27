@@ -249,7 +249,7 @@ var password = req.body.password;
 
     var salt = crypto.randomBytes(128).toString('hex');
     var dbstring = hash(password,salt);
-    pool.query('INSERT INTO "usertable" (username,password) VALUES (222,333)',  [username,dbstring], function(err,result){
+    pool.query('INSERT INTO "usertable" (username,password) VALUES ($1,$2)',  [username,dbstring], function(err,result){
         if(err){
            res.status(500).send(err.toString());
         }else{
