@@ -1,6 +1,10 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+
+var app = express();
+app.use(morgan('combined'));
+app.use(bodyParser.json());
 var bodyParser = require('body-parser');
 
 
@@ -220,9 +224,7 @@ app.get('/test-db',function (req, res){
 });
 ///////////
 
-var app = express();
-app.use(morgan('combined'));
-app.use(bodyParser.json());
+
 
 //program to convert string to hash string
 var crypto = require('crypto');
