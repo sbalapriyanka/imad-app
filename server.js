@@ -3,9 +3,10 @@ var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
+var bodyParser = require('body-parser');
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-var bodyParser = require('body-parser');
+
 
 
 
