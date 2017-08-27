@@ -259,6 +259,39 @@ var password = req.body.password;
     
         });
     });
+    
+    
+    //chk for login credentials
+    
+    app.post('/login', function(req,res){  
+var username = req.body.username;
+var password = req.body.password;
+
+    pool.query('SELECT * FROM "usertable"  username = $2 ', [ username],function(err,result){
+        if (err){
+            res.status(500).send(err.toString());
+        }
+            else {
+            if(result.rows.length===0){
+            res.status(403).send('Username/password is not matched');
+            } else{
+                //password match
+            
+            var dbstring = result.rows.rows[0].password;
+            var salt = dbstring.split('$')[2];
+            var hashstring = hash(password,salt);
+            if(hashstring===dbstring)
+            {
+                res.send('user login success');
+            }
+                else{
+                res.status(403).send('unsuccessful login');
+            }
+          }
+        
+    } 
+        });
+    });
 
 
 
