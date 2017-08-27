@@ -2,10 +2,9 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var bodyParser = require('body-parser');
-var app = express();
-app.use(morgan('combined'));
-app.use(bodyParser.json());
-app.use(morgan('combined'));
+
+
+
 
 var FirstOne = {
     title: 'My first article',
@@ -221,7 +220,9 @@ app.get('/test-db',function (req, res){
 });
 ///////////
 
-
+var app = express();
+app.use(morgan('combined'));
+app.use(bodyParser.json());
 
 //program to convert string to hash string
 var crypto = require('crypto');
@@ -239,12 +240,7 @@ function hash(input,salt)
 }
 
 //create entry in user table
-
-
-
-
-  app.post('/create-user',function(req,res){  
-
+app.post('/create-user',function(req,res){  
 var username = req.body.username;
 var password = req.body.password;
 
