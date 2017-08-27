@@ -267,7 +267,7 @@ var password = req.body.password;
 var username = req.body.username;
 var password = req.body.password;
 
-    pool.query('SELECT * FROM "usertable"  WHERE id = 2 ', [ username],function(err,result){
+    pool.query('SELECT * FROM "usertable"  WHERE id = 2 ', [id],function(err,result){
         if (err){
             res.status(500).send(err.toString());
         }
