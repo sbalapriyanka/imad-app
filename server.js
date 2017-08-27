@@ -4,7 +4,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
 app.use(morgan('combined'));
-app.use(bodyparser.json());
+app.use(bodyParser.json());
 app.use(morgan('combined'));
 
 var FirstOne = {
