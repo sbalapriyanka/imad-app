@@ -277,7 +277,7 @@ var password = req.body.password;
             } else{
                 //password match
             
-            var dbstring = result.rows.rows[0].password;
+            var dbstring = result.rows[0].password;
             var salt = dbstring.split('$')[2];
             var hashstring = hash(password,salt);
             if(hashstring===dbstring)
