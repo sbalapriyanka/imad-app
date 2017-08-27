@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var bodyParser = require('body-parser');
 var app = express();
 app.use(morgan('combined'));
 
@@ -237,7 +237,7 @@ function hash(input,salt)
 }
 
 //create entry in user table
-var bodyParser = require('body-parser')
+
 
 app.use(bodyParser.json());
 
