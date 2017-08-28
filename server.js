@@ -262,6 +262,13 @@ var password = req.body.password;
     
     
     //chk for login credentials
+    //set session
+    var session = require('express-session');
+    
+    app.use(session({
+        secret: 'somevalue',
+        cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
+    }));
     
     app.post('/login', function(req,res){  
 var username = req.body.username;
