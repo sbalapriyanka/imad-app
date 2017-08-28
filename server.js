@@ -292,7 +292,7 @@ var password = req.body.password;
                 
                 //set session
                 
-                req.session.auth = result.rows[0].id;
+                req.session.auth = {userid: result.rows[0].id};
                 
                 res.send('user login success');
             }
@@ -309,7 +309,7 @@ var password = req.body.password;
 
 app.get('/check-login',function(req,res){
     if(req.session && req.session.auth && req.session.auth.userid){
-        res.send("u r loged in" ,+req.session.auth.userid);
+        res.send("u r loged in" , + req.session.auth.userid.toString());
         
     }else {
         res.send("You are not logged in");
