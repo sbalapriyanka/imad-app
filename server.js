@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 
-
+ 
 
 
 
@@ -263,7 +263,7 @@ var password = req.body.password;
     
     //chk for login credentials
     //set session
-    var session = require("express-session");
+    var session = require('express-session');
     
     app.use(session({
         secret: 'somevalue',
