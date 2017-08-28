@@ -316,8 +316,11 @@ app.get('/check-login',function(req,res){
     }
 });
 
-
-
+//not storing session anymore
+app.get('/logout',function(req,res){
+    delete req.session.auth; 
+    res.send('Logged out');
+});
 
 
 
