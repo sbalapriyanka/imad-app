@@ -45,10 +45,32 @@ submit.onclick = function () {
     Namelist.innerHTML = list;
 };
 
-
+////////////////////////////////////////////////////////////////////
+//submit username and password to login
 var submit = document.GetElementById('submit_btn');
 submit.onclick = function(){
+    
 
+    //create a request object
+    var request = new XMLHTTPRequest(); 
+    
+    //capture the response and store in variable 
+    
+    request.onreadystatechange = function(){
+        if(request.readystate === XMLHTTPRequest.DONE){
+            //TAKE AACTION
+            if(request.status === 200)
+            alert('login success');
+            else if(request.status===403)
+            alert('login/password is incorrect');
+            else if(request.status === 500)
+            {
+                alert('internal server error');
+            }
+        }
+    };
+
+    //extract user name and password
 var username = getElementById('userid').value;
 var password = getElementById('pass_id').value;
 console.log(username);
