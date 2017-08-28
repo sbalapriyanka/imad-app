@@ -73,8 +73,8 @@ submit.onclick = function(){
     };
 
     //extract user name and password
-var username = document.getElementById('userid').value;
-var password = document.getElementById('pass_id').value;
+var username = document.getElementById('username').value;
+var password = document.getElementById('password').value;
 console.log(username);
 console.log(password);
 request.open('POST','http://balapriyankasomasekaran.imad.hasura-app.io/login',true);
