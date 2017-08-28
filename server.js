@@ -289,6 +289,11 @@ var password = req.body.password;
             var hashstring = hash(password,salt);
             if(hashstring===dbstring)
             {
+                
+                //set session
+                
+                req.session.auth = result.rows[0].id;
+                
                 res.send('user login success');
             }
                 else{
@@ -300,7 +305,16 @@ var password = req.body.password;
         });
     });
 
+///session endpoint
 
+app.get('/check-login',functionreq,res){
+    if(req.session && req.session.auth && req.session.auth.userid){
+        res.send("u r loged in" ,+req.session.auth.userid);
+        
+    }else {
+        res.send("You are not logged in");
+    }
+}
 
 
 
