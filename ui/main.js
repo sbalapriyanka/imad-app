@@ -47,6 +47,8 @@ submit.onclick = function () {
 
 ////////////////////////////////////////////////////////////////////
 //submit username and password to login
+
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     
