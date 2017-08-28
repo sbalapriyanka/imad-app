@@ -59,7 +59,7 @@ submit.onclick = function(){
     request.onreadystatechange = function(){
         if(request.readystate === XMLHttpRequest.DONE){
             //TAKE AACTION
-            if(request.status === 200)
+            if(request.status === 200){
             alert('login success');
         }
             else if(request.status===403){
@@ -69,7 +69,7 @@ submit.onclick = function(){
             {
                 alert('internal server error');
             }
-        
+        }
     };
 
     //extract user name and password
