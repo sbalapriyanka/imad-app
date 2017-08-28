@@ -49,8 +49,8 @@ submit.onclick = function () {
 var submit = document.GetElementById('submit_btn');
 submit.onclick = function(){
 
-var username = getElementById('username').value;
-var password = getElementById('password').value;
+var username = getElementById('userid').value;
+var password = getElementById('pass_id').value;
 console.log(username);
 console.log(password);
 request.open('POST','http://balapriyankasomasekaran.imad.hasura-app.io/login',true);
