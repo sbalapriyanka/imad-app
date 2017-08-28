@@ -47,36 +47,38 @@ submit.onclick = function () {
 
 ////////////////////////////////////////////////////////////////////
 //submit username and password to login
-var submit = document.GetElementById('submit_btn');
+var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     
 
     //create a request object
-    var request = new XMLHTTPRequest(); 
+    var request = new XMLHttpRequest(); 
     
     //capture the response and store in variable 
     
     request.onreadystatechange = function(){
-        if(request.readystate === XMLHTTPRequest.DONE){
+        if(request.readystate === XMLHttpRequest.DONE){
             //TAKE AACTION
             if(request.status === 200)
             alert('login success');
-            else if(request.status===403)
+        }
+            else if(request.status===403){
             alert('login/password is incorrect');
+            }
             else if(request.status === 500)
             {
                 alert('internal server error');
             }
-        }
+        
     };
 
     //extract user name and password
-var username = getElementById('userid').value;
-var password = getElementById('pass_id').value;
+var username = document.getElementById('userid').value;
+var password = document.getElementById('pass_id').value;
 console.log(username);
 console.log(password);
 request.open('POST','http://balapriyankasomasekaran.imad.hasura-app.io/login',true);
-request.setRequestHeader('Content-Type',application/json);
-request.send(JSON.stringify({username:username,password:pass}));
+request.setRequestHeader('Content-Type','application/json');
+request.send(JSON.stringify({username: username, password: pass}));
 };
 
