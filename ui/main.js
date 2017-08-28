@@ -45,3 +45,16 @@ submit.onclick = function () {
     Namelist.innerHTML = list;
 };
 
+
+var submit = document.GetElementById('submit_btn');
+submit.onclick = function(){
+
+var username = getElementById('username').value;
+var password = getElementById('password').value;
+console.log(username);
+console.log(password);
+request.open('POST','http://balapriyankasomasekaran.imad.hasura-app.io/login',true);
+request.setRequestHeader('Content-Type',application/json);
+request.send(JSON.stringify({username:username,password:pass}));
+};
+
