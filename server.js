@@ -307,14 +307,14 @@ var password = req.body.password;
 
 ///session endpoint
 
-app.get('/check-login',functionreq,res){
+app.get('/check-login',function(req,res){
     if(req.session && req.session.auth && req.session.auth.userid){
         res.send("u r loged in" ,+req.session.auth.userid);
         
     }else {
         res.send("You are not logged in");
     }
-}
+});
 
 
 
