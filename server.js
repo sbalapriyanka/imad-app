@@ -292,7 +292,7 @@ var password = req.body.password;
                 
                 //set session
                 
-                req.session.auth = {userid: result.rows[0].id};
+                req.session.auth = {userId: result.rows[0].id};
                 
                 res.send('user login success');
             }
@@ -308,7 +308,7 @@ var password = req.body.password;
 ///session endpoint
 
 app.get('/check-login',function(req,res){
-    if(req.session && req.session.auth && req.session.auth.userid){
+    if(req.session && req.session.auth && req.session.auth.userId){
         res.send('u r loged in'  + req.session.auth.userid.toString());
         
     }else {
